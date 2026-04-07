@@ -16,6 +16,8 @@ Email: a02298482@usu.edu
 4. Variability_table.xlsx
 	This contains the ratios that the code uses to create the variable inflow files. Column one is year, column two if a ratio relative to the 	baseline (12.95 MAF) of natural flow to Lake Powell. 
 
+
+
 ## Directions to use the Hydrology Outputs in CRSS Model 
 
 1. You need to put the VariableHydrology folder into the "DMI" folder in your CRSS root folder.
@@ -27,6 +29,26 @@ Email: a02298482@usu.edu
 
 
 # Description of Hydrology Scenario
+
+The hydrology used for this scenario comes from Trace 46 of Drought_Paleo ensemble. It has an average flow of 10.33MAF. The original scenario has 50 years. We truncated it to 40 years. 
+
+You can find more information about the ensemble and traces at the following papers/links.
+
+1. Developing Storylines of Plausible Future Streamflow and Generating a New Warming‐Driven Declining Streamflow Ensemble: Colorado River Case Study - Salehabadi - 2025 - Water Resources Research - Wiley Online Library
+https://agupubs.onlinelibrary.wiley.com/journal/19447973
+
+1. Quantifying and Classifying Streamflow Ensembles Using a Broad Range of Metrics for an Evidence‐Based Analysis: Colorado River Case Study - Salehabadi - 2024 - Water Resources Research - Wiley Online Library
+https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024WR037225
+
+1. The spreadsheet attached is in the ensemble specifics metrics folder from:
+R Scripts for Evaluating Annual Streamflow Ensemble Metrics and Data and Results from their Application in the Colorado River Basin | CUAHSI HydroShare
+https://www.hydroshare.org/resource/d7b65c91dda047e1969a9f9cd09b489f/
+
+The first paper basically tells us that CMIP5_LOCA fits the most Storylines, specifically 1 and 2. However, Dr. Rosenberg told me to focus on the Ensembles from Dr. Tarboton and Dr. Salehabadi created, which the ensemble that best fits those narratives from their specific work is DroughtYrRes_1576_1600. 
+
+
+
+
 
 Hi Ashley!
 
