@@ -57,4 +57,9 @@ The first paper basically tells us that CMIP5_LOCA fits the most Storylines, spe
 
 ## Requested Citation
 
-Jones. A., (2026). "Base Low Volatile Hydrology Scenario for CEE6490 Spring 2026 Projects". Utah State University. https://github.com/sullivanashley19/CEE6490_Spring2026_HydrologyBaseCase/tree/main
+Jones. A., (2026). "Base Low Volatile Hydrology Scenario for CEE6490 Spring 2026 Projects". Utah State 
+University. https://github.com/sullivanashley19/CEE6490_Spring2026_HydrologyBaseCase/tree/main
+
+## Canvas Course link
+
+https://usu.instructure.com/courses/803009
