@@ -20,7 +20,7 @@ representing low volatile flows. There are 29 input files representing the 29 lo
 
 1. **HydrologyScenarios.xlsx** - This contains various hydrology ensembles and traces. The scenario in file 4 comes from sheet Drought_Paleo Trace 46. 
 
-1. **VariableHydrologyPlot** - This is a visualization of variability in this scenario. This plot is an output of the r code. The y-axis is a ratio of the annual natural flow to the baseline flow per year (12.95 MAF). 
+1. **VariableHydrologyPlot.png** - This is a visualization of variability in this scenario. This plot is an output of the r code. The y-axis is a ratio of the annual natural flow to the baseline flow per year (12.95 MAF). 
 
 ## Directions to use the Hydrology Outputs in CRSS Model 
 
