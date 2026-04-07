@@ -17,7 +17,7 @@ Email: a02298482@usu.edu
 	This contains the ratios that the code uses to create the variable inflow files. Column one is year, column two if a ratio relative to the 	baseline (12.95 MAF) of natural flow to Lake Powell. 
 
 5. HydrologyScenarios.xlsx
-	This contains various hydrology ensembles and traces. 
+	This contains various hydrology ensembles and traces. The sources are listed below. 
 
 ## Directions to use the Hydrology Outputs in CRSS Model 
 
