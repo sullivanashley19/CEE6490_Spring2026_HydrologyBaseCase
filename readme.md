@@ -52,8 +52,9 @@ The first paper basically tells us that CMIP5_LOCA fits the most Storylines, spe
 ## Directions to Reproduce the Inflow files
 1. Download R studio using this link - https://posit.co/download/rstudio-desktop/
 1. Download the Variation_Code.r code from the repository
+1. Create a folder called **VariableHydrology**
 1. Open the file in R studio and run the code
-1. The output of the code is 29 inflow files that can be used in CRSS
+1. The output of the code is 29 inflow files located in the VariableHydrology folder that can be used in CRSS
 
 ## Requested Citation
 
