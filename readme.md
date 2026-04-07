@@ -4,20 +4,15 @@ Email: a02298482@usu.edu
 
 ## Repository Contents
 
-1. VariableHydrology folder
-	This folder contains the inflow files. 
+1. **VariableHydrology** folder - This folder contains the inflow files. 
 
-2. VariableHydrology.CONTROL file
-	This contains the information that tells CRSS where to find each of the files needed for inflow. 
+2. **VariableHydrology.CONTROL** file - This contains the information that tells CRSS where to find each of the files needed for inflow. 
 
-3. Variation_Code.r
-	This file contains the code that creates the inflow files that can be put in CRSS. You do not have to use this code since I have 	included the inflow files 
+3. **Variation_Code.r** - This file contains the code that creates the inflow files that can be put in CRSS. You do not have to use this code since I have 	included the inflow files 
 
-4. Variability_table.xlsx
-	This contains the ratios that the code uses to create the variable inflow files. Column one is year, column two if a ratio relative to the 	baseline (12.95 MAF) of natural flow to Lake Powell. 
+4. **Variability_table.xlsx** - This contains the ratios that the code uses to create the variable inflow files. Column one is year, column two if a ratio relative to the 	baseline (12.95 MAF) of natural flow to Lake Powell. 
 
-5. HydrologyScenarios.xlsx
-	This contains various hydrology ensembles and traces. The sources are listed below. 
+5. **HydrologyScenarios.xlsx** - This contains various hydrology ensembles and traces. The scenario in file 4 comes from sheet Drought_Paleo Trace 46. 
 
 ## Directions to use the Hydrology Outputs in CRSS Model 
 
