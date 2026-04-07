@@ -12,13 +12,15 @@ representing low volatile flows. There are 29 input files representing the 29 lo
 
 1. **VariableHydrology** folder - This folder contains the inflow files. 
 
-2. **VariableHydrology.CONTROL** file - This contains the information that tells CRSS where to find each of the files needed for inflow. 
+1. **VariableHydrology.CONTROL** file - This contains the information that tells CRSS where to find each of the files needed for inflow. 
 
-3. **Variation_Code.r** - This file contains the code that creates the inflow files that can be put in CRSS. You do not have to use this code since I have 	included the inflow files 
+1. **Variation_Code.r** - This file contains the code that creates the inflow files that can be put in CRSS. You do not have to use this code since I have 	included the inflow files 
 
-4. **Variability_table.xlsx** - This contains the ratios that the code uses to create the variable inflow files. Column one is year, column two if a ratio relative to the 	baseline (12.95 MAF) of natural flow to Lake Powell. 
+1. **Variability_table.xlsx** - This contains the ratios that the code uses to create the variable inflow files. Column one is year, column two if a ratio relative to the 	baseline (12.95 MAF) of natural flow to Lake Powell. 
 
-5. **HydrologyScenarios.xlsx** - This contains various hydrology ensembles and traces. The scenario in file 4 comes from sheet Drought_Paleo Trace 46. 
+1. **HydrologyScenarios.xlsx** - This contains various hydrology ensembles and traces. The scenario in file 4 comes from sheet Drought_Paleo Trace 46. 
+
+1. **VariableHydrologyPlot** - This is a visualization of variability in this scenario. This plot is an output of the r code. The y-axis is a ratio of the annual natural flow to the baseline flow per year (12.95 MAF). 
 
 ## Directions to use the Hydrology Outputs in CRSS Model 
 
