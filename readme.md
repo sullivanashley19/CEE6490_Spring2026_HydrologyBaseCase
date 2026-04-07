@@ -1,6 +1,12 @@
-# Base Hydrology for CEE6490 Spring 2026 Projects
+# Base Low Volatile Hydrology Scenario for CEE6490 Spring 2026 Projects
 Created by: Ashley Jones
+
 Email: a02298482@usu.edu
+
+
+This repository provides hydrologic input files for Riverware Colorado River Simulation System Model (CRSS) for a scenario 
+representing low volatile flows. There are 29 input files representing the 29 locations required by CRSS. 
+
 
 ## Repository Contents
 
@@ -24,7 +30,7 @@ Email: a02298482@usu.edu
 1. Once you have created a DMI, you can click the green play button to invoke your DMI. Then you can run your model. 
 
 
-# Description of Hydrology Scenario
+## Description of Hydrology Scenario
 
 The hydrology used for this scenario comes from Trace 46 of Drought_Paleo ensemble. It has an average flow of 10.33MAF. The original scenario has 50 years. We truncated it to 40 years. 
 
@@ -43,5 +49,11 @@ https://www.hydroshare.org/resource/d7b65c91dda047e1969a9f9cd09b489f/
 The first paper basically tells us that CMIP5_LOCA fits the most Storylines, specifically 1 and 2. However, Dr. Rosenberg told me to focus on the Ensembles from Dr. Tarboton and Dr. Salehabadi created, which the ensemble that best fits those narratives from their specific work is DroughtYrRes_1576_1600. 
 
 
+## Directions to Reproduce the Inflow files
+1. Download R studio using this link - https://posit.co/download/rstudio-desktop/
+1. Download the Variation_Code.r code from the repository
+1. Open the file in R studio and run the code
 
+## Requested Citation
 
+Jones. A., (2026). "Base Low Volatile Hydrology Scenario for CEE6490 Spring 2026 Projects". Utah State University. https://github.com/sullivanashley19/CEE6490_Spring2026_HydrologyBaseCase/tree/main
