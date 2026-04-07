@@ -16,7 +16,8 @@ Email: a02298482@usu.edu
 4. Variability_table.xlsx
 	This contains the ratios that the code uses to create the variable inflow files. Column one is year, column two if a ratio relative to the 	baseline (12.95 MAF) of natural flow to Lake Powell. 
 
-
+5. HydrologyScenarios.xlsx
+	This contains various hydrology ensembles and traces. 
 
 ## Directions to use the Hydrology Outputs in CRSS Model 
 
@@ -47,34 +48,4 @@ https://www.hydroshare.org/resource/d7b65c91dda047e1969a9f9cd09b489f/
 The first paper basically tells us that CMIP5_LOCA fits the most Storylines, specifically 1 and 2. However, Dr. Rosenberg told me to focus on the Ensembles from Dr. Tarboton and Dr. Salehabadi created, which the ensemble that best fits those narratives from their specific work is DroughtYrRes_1576_1600. 
 
 
-
-
-
-Hi Ashley!
-
-So here are the papers regarding this data set:
-Developing Storylines of Plausible Future Streamflow and Generating a New Warming‐Driven Declining Streamflow Ensemble: Colorado River Case Study - Salehabadi - 2025 - Water Resources Research - Wiley Online Library
-https://agupubs.onlinelibrary.wiley.com/journal/19447973
-
-Quantifying and Classifying Streamflow Ensembles Using a Broad Range of Metrics for an Evidence‐Based Analysis: Colorado River Case Study - Salehabadi - 2024 - Water Resources Research - Wiley Online Library
-https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2024WR037225
-
-The first paper basically tells us that CMIP5_LOCA fits the most Storylines, specifically 1 and 2. However, Dr. Rosenberg told me to focus on the Ensembles from Dr. Tarboton and Dr. Salehabadi created, which the ensemble that best fits those narratives from their specific work is DroughtYrRes_1576_1600. 
-
-The spreadsheet attached is in the ensemble specifics metrics folder from:
-R Scripts for Evaluating Annual Streamflow Ensemble Metrics and Data and Results from their Application in the Colorado River Basin | CUAHSI HydroShare
-https://www.hydroshare.org/resource/d7b65c91dda047e1969a9f9cd09b489f/
-
-I would recommend the following traces:
-
-Sheet 	Trace	Notes
-Drought_Paleo	Trace46	Average:10.33 MAF, Length: 50 years
-CMIP5_LOCA	39	Average:11.52 MAF, Length: 150 years
-
-
-Let me know if anything else is needed!
-Brittany Fager
-Brittany.Fager@USU.edu
-Utah Water Research Lab
-Utah State University 
 
