@@ -121,48 +121,6 @@ getwd()
 # get the data from the flow file generated using the first code
 # LOAD IN THE DROUGHT DATASET
 FlowMatrix <- read.xlsx("Monthly_Flows_DroughtScenario_2000-2018.xlsx")
-#FILTERING ON ALL THE ROWS AND COLUMNS 3-31
-subFlowMatrix <- FlowMatrix[,3:31]
-
-# Reduction percentages to the inflow, you may change these numbers
-# baseline is 12.95269
-
-yearlyFlowfirst <- c()
-yearlyFlowsecond<-c()
-yearlyFlowthird <-c()
-DateYear <- c()
-
-m = 1
-n=m+11
-y =2022
-year=c()
-
-# READING THE NUMBERS FROM EXCEL AND PUTTING THEM INTO A MATRIX/DATAFRAME
-for (i in 1:NumYear){
-  year[i] = FlowMatrix[m,1]
-  matrix = subFlowMatrix[m:n,]
-  Flow = rowSums(matrix[,1:20])
-  TotalFlow = sum(Flow)/1000000
-  yearlyFlowfirst[i] = TotalFlow * FirstScenario
-  yearlyFlowsecond [i] =TotalFlow * SecondScenario
-  yearlyFlowthird [i] =TotalFlow * ThirdScenario
-
-  DateYear[i] = y
-  
-  m=m+12
-  n=n+12
-  y=y+1
-}
-
-yearlyFlowfirst
-yearlyFlowsecond
-yearlyFlowthird
-DateYear
-
-mean(yearlyFlowfirst)  #------------------------------------------------------
-mean(yearlyFlowsecond)
-mean(yearlyFlowthird)
-
 
 # Third Section
 
@@ -176,29 +134,37 @@ mean(yearlyFlowthird)
 #Drought <- do.call("rbind",replicate(40,Drought,simplify = FALSE))
 set.seed(123)  # optional, for reproducibility ---------------------------------------new code from Chatgpt
 
-baseYear <- FlowMatrix[1:12,]   # first year of data
 
-Drought_var <- NULL
-
-VarData = read.xlsx("Variability_table.xlsx", sheet= 'values')
-
-multipliers <- as.numeric(VarData[,2])
-
-for (i in 1:length(multipliers)) {
+build_scenario <- function(multipliers, FlowMatrix) {
   
-  multiplier <- multipliers[i]
+  Drought_out <- NULL
   
-  baseYear <- FlowMatrix[((i-1)*12+1):(i*12),]
+  for (i in 1:length(multipliers)) {
+    
+    multiplier <- multipliers[i]
+    
+    baseYear <- FlowMatrix[((i-1)*12+1):(i*12),]
+    
+    newYear <- baseYear
+    newYear[,3:22] <- newYear[,3:22] * multiplier
+    
+    Drought_out <- rbind(Drought_out, newYear)
+  }
   
-  newYear <- baseYear
-  newYear[,3:22] <- newYear[,3:22] * multiplier
-  
-  Drought_var <- rbind(Drought_var, newYear)
+  return(Drought_out)
 }
 
-plot(multipliers, type='b', main="Variability Multipliers")
+VarData = read.xlsx("Variability_table.xlsx", sheet = 'values')
 
-sum(Drought_var[1:12,3:22])/1000000
+multiplier_drought_paleo <- as.numeric(VarData[,2])
+multiplier_CMIP5_LOCA   <- as.numeric(VarData[,3])
+
+Drought_paleo <- build_scenario(multiplier_drought_paleo, FlowMatrix)
+Drought_cmip5 <- build_scenario(multiplier_CMIP5_LOCA, FlowMatrix)
+
+
+plot(multiplier_drought_paleo, type='b', main="Paleo Multipliers")
+plot(multiplier_CMIP5_LOCA, type='b', main="CMIP5 Multipliers")
 
 
 # Fifth Section
@@ -218,19 +184,22 @@ date = 'start_date: 2024-1-31 24:00'
 units = 'units: acre-ft/month'
 firstRow = c('','', rep(c(date), each=29))
 secondRow = c('','', rep(c(units), each=29))
-Drought_var <- rbind(firstRow, secondRow, Drought_var)
+
+
+Drought_paleo <- rbind(firstRow, secondRow, Drought_paleo)
+Drought_cmip5 <- rbind(firstRow, secondRow, Drought_cmip5)
 
 # save the inflow of each scenario into excel file (optional)
-filename1 <-paste0("Monthly_Flows_DroughtScenario_Scen1_",Swy1,"-",Swy2,".xlsx")
-filename2 <-paste0("Monthly_Flows_DroughtScenario_Scen2_",Swy1,"-",Swy2,".xlsx")
-filename3 <-paste0("Monthly_Flows_DroughtScenario_Scen3_",Swy1,"-",Swy2,".xlsx")
+filename1 <- paste0("Flows_Paleo_",Swy1,"-",Swy2,".xlsx")
+filename2 <- paste0("Flows_CMIP5_",Swy1,"-",Swy2,".xlsx")
+
+write.xlsx(Drought_paleo, file=filename1, asTable = FALSE, overwrite = TRUE)
+write.xlsx(Drought_cmip5, file=filename2, asTable = FALSE, overwrite = TRUE)
 
 setwd(path)
 getwd()
 
-# create the "DroughtScenarios" directory to save the drought scenarios
 outputDir = "DroughtScenarios"
-
 # The directories will be created only if they do not exist
 if (file.exists(outputDir)){
   setwd(file.path(path, outputDir))
@@ -240,9 +209,6 @@ if (file.exists(outputDir)){
 }
 
 getwd() # you should be in the "DroughtScenarios" directory
-
-# SAVES THE DATA INTO AN EXCEL FILE 
-write.xlsx(Drought_var, file=filename1, asTable = FALSE, overwrite = TRUE)
 
 
 
@@ -261,10 +227,31 @@ write.xlsx(Drought_var, file=filename1, asTable = FALSE, overwrite = TRUE)
 # and run the "DirName" and the "DroHy" next line of the second scenario, 
 # then Continue with the code.
 
+## ----------- Write Paleo Scenario Files ---------------------
+DirName = "PaleoScenario"
+DroHy = Drought_paleo
 
-#1. The 10 MAF Drought Hydrology
-DirName = "VariableHydrology"
-DroHy = Drought_var
+NewPath =paste0(path,"/CRSS.Aug2023v2/dmi/",DirName,'/trace1')
+NewPath
+
+
+setwd(NewPath)
+getwd()
+
+# THIS IS WHERE WE CREATE INFLOW FILES
+Sites=length(FlowMatrix[2,])-2
+for (i in 1:Sites){
+  j = i+2
+  fName <- paste0(InflowSites[i])
+  print(fName)
+  write.table(DroHy[,j], file = fName,row.names = FALSE, 
+              col.names = FALSE, quote = FALSE)
+}
+
+
+## --------- Write CMIP5 Scenarios ---------------------
+DirName = "CMIP5Scenario"
+DroHy = Drought_cmip5
 
 
 NewPath =paste0(path,"/CRSS.Aug2023v2/dmi/",DirName,'/trace1')
@@ -287,5 +274,4 @@ for (i in 1:Sites){
               col.names = FALSE, quote = FALSE)
 }
 
-print('done')
 

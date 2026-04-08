@@ -1,0 +1,34 @@
+AlamoNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+ArchuletaNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+BlueMesaNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+BluffNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+CameoNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+CameronNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+CiscoColoradoNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+CiscoDoloresNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+CrystalNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+DavisNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+FontenelleNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+GlenwoodSpringsNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+GrandCanyonNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+GrandJunctionNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+GreendaleNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+GreenRiverUTGreenNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+GreenRiverUTSanRafaelNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+GreenRiverWYNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+HooverNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+ImperialNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+LeesFerryNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+LeesFerryPariaNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+LilyNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+LittlefieldNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+MaybellNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+ParkerNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+RandlettNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+TaylorParkNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+WatsonNF.Inflow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft/month scale=1.0 import=resize
+HydrologyParameters.SupplyScenario: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=NONE scale=1.0
+HydrologyParameters.TraceNumber: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=NONE scale=1.0
+MeadFloodControlData.hydrologyIncrement: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=NONE scale=1.0
+MWD_ICS.SacWYType: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=NONE scale=1.0
+TMD_East_Slope_Supply.St_Vrain_Annual_Flow: file=$(CRSS_DIR)/dmi/CMIP5Scenario/%tempdir/%o.%s units=acre-ft scale=1.0 import=resize
