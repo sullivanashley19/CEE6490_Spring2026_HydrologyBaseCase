@@ -10,9 +10,15 @@ representing low volatile flows. There are 29 input files representing the 29 lo
 
 ## Repository Contents
 
-1. **VariableHydrology** folder - This folder contains the inflow files. 
+1. **CMIP5Scenario** folder - This folder contains the inflow files for the CMIP5_LOCA ensemble.
 
-1. **VariableHydrology.CONTROL** file - This contains the information that tells CRSS where to find each of the files needed for inflow. 
+1. **PaleoScenario** folder - This folder contains the inflow files for the Drought_Paleo ensemble.
+
+1. **CMIP5Scenario.CONTROL** file - This contains the information that tells CRSS where to find each of the files needed 
+for inflow for the CMIP5_LOCA ensemble.
+
+1. **PaleoScenario.CONTROL** file - This contains the information that tells CRSS where to find each of the files needed 
+for inflow for the Drought_Paleo ensemble
 
 1. **Variation_Code.r** - This file contains the code that creates the inflow files that can be put in CRSS. You do not have to use this code since I have 	included the inflow files 
 
@@ -20,7 +26,10 @@ representing low volatile flows. There are 29 input files representing the 29 lo
 
 1. **HydrologyScenarios.xlsx** - This contains various hydrology ensembles and traces. The scenario in file 4 comes from sheet Drought_Paleo Trace 46. 
 
-1. **VariableHydrologyPlot.png** - This is a visualization of variability in this scenario. This plot is an output of the r code. The y-axis is a ratio of the annual natural flow to the baseline flow per year (12.95 MAF). 
+1. **CMIP5Scenario_Plot.png** - This is a visualization of variability in this scenario. This plot is an output of the r code. The y-axis is a ratio of the annual natural flow for the CMIP5_LOCA ensemble to the baseline flow per year (12.95 MAF). 
+
+1. **PaleoScenario_Plot.png** - This is a visualization of variability in this scenario. This plot is an output of the r code. The y-axis is a ratio of the annual natural flow for the Drought_Paleo ensemble to the baseline flow per year (12.95 MAF). 
+
 
 ## Directions to use the Hydrology Outputs in CRSS Model 
 
