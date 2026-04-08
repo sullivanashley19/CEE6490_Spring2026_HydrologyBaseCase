@@ -20,7 +20,7 @@ for inflow for the CMIP5_LOCA ensemble.
 1. **PaleoScenario.CONTROL** file - This contains the information that tells CRSS where to find each of the files needed 
 for inflow for the Drought_Paleo ensemble
 
-1. **Variation_Code.r** - This file contains the code that creates the inflow files that can be put in CRSS. You do not have to use this code since I have 	included the inflow files 
+1. **Variability_Code.r** - This file contains the code that creates the inflow files that can be put in CRSS. You do not have to use this code since I have 	included the inflow files 
 
 1. **Variability_table.xlsx** - This contains the ratios that the code uses to create the variable inflow files. Column one is year, column two if a ratio relative to the 	baseline (12.95 MAF) of natural flow to Lake Powell. 
 
