@@ -1,7 +1,14 @@
 ######## ======================================================================
-######## Drought Secnarios.
+######## Created by: Ashley Jones
+######## Modified on: 4/8/2026
+######## Base Code came from: Motasem S Abualqumboz and Braden Chamberlain
 ######## 
-######## Motasem S Abualqumboz and Braden Chamberlain, Utah State University 
+######## This code creates 29 inflow files for two different scenarios of variability
+######## These inflow files can be used in CRSS. 
+
+######## For this code to work properly it needs to be in the same folder as the 
+######## CRSS.Aug2023v2 CRSS folder, Monthly_Flows_DroughtScenario_2000-2018.xlsx,
+######## and Variability_table.xlsx
 ######## ======================================================================
 
 
@@ -12,14 +19,7 @@ require(rstudioapi)
 library(openxlsx)
 require(dplyr)
 
-# Make sure that the following files are placed in main directory of your project
-# "C:/Users/m_abu/Desktop/PhD/1_Courses/2_Spring2022
-# /RiverBasinManagement/Project2022"
 
-#1. CRSS_DIR (The folder that have the model inside) 
-#2. This R file
-#3. Monthly_Flows_DroughtScenario_2000-2018
-#4. Run this code 
 
 # Set working directory to source file location
 setwd(dirname(getActiveDocumentContext()$path))       
