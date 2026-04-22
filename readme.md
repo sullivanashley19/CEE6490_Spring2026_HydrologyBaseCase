@@ -30,6 +30,9 @@ for inflow for the Drought_Paleo ensemble
 
 1. **PaleoScenario_Plot.png** - This is a visualization of variability in this scenario. This plot is an output of the r code. The y-axis is a ratio of the annual natural flow for the Drought_Paleo ensemble to the baseline flow per year (12.95 MAF). 
 
+1. **Results_Paleo.xlsx** - Results for a run in RiverWare using the Paleo trace 46 hydrology
+
+1. **Reults_CMIP5.xlsx** - Results for a run in RiverWare using the CMIP5_LOCA trace 39 hydrology
 
 ## Directions to use the Hydrology Outputs in CRSS Model 
 
